@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNPIT 初心者ガイド</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 850px;
+            width: 90%;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h1, h2 {
+            font-weight: 700;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 50px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #6a11cb;
+            color: #6a11cb;
+        }
+        p, li {
+            font-size: 1.1em;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background: #f9f9f9;
+            margin-bottom: 12px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2575fc;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        strong {
+            color: #d9534f;
+            font-weight: 700;
+        }
+        .official-link {
+            display: block;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 1.2em;
+        }
+        .official-link a {
+            color: #fff;
+            background-color: #2575fc;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+        .official-link a:hover {
+            background-color: #6a11cb;
+            transform: scale(1.05);
+        }
+        .faq-item {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 5px solid #ff7e5f;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px;
+            font-weight: 700;
+            color: #333;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+            color: #555;
+        }
+        .faq-answer p {
+            padding-bottom: 20px;
+            margin: 0;
+        }
+        .faq-toggle {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2575fc;
+            transition: transform 0.3s;
+        }
+        .faq-question.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SNPIT初心者ガイド</h1>
+        <p>ようこそSNPITへ！このガイドは、アプリのインストールから、初めての写真を撮るまでの全ステップを分かりやすく解説します。</p>
+
+        <div class="official-link">
+            <a href="https://lp.snpit.xyz/" target="_blank" rel="noopener noreferrer">公式サイトはこちら</a>
+        </div>
+
+        <section id="install">
+            <h2>Step 1: アプリをインストール</h2>
+            <p>まず、お使いのスマートフォンにSNPITアプリをインストールしましょう。</p>
+            <ul>
+                <li><strong>iPhone (iOS) の場合:</strong> App Storeで「SNPIT」と検索し、ダウンロードします。</li>
+                <li><strong>Android の場合:</strong> Google Play ストアで「SNPIT」と検索し、ダウンロードします。</li>
+            </ul>
+        </section>
+
+        <section id="login">
+            <h2>Step 2: ログインと初期設定</h2>
+            <p>インストールが完了したら、アプリを開き、画面の指示に従ってアカウントを作成またはログインします。</p>
+        </section>
+
+        <section id="camera-screen">
+            <h2>Step 3: 撮影画面の基本</h2>
+            <p>ログイン後、メインの撮影画面が表示されます。中央下にある大きな<strong>シャッターボタン</strong>が写真撮影のキーです。</p>
+        </section>
+
+        <section id="take-photo">
+            <h2>Step 4: 最初の写真を撮ってみよう！</h2>
+            <p>撮りたい風景やオブジェクトにカメラを向け、準備ができたら<strong>シャッターボタン</strong>をタップ！最高の瞬間を捉えましょう。</p>
+        </section>
+
+        <section id="preview">
+            <h2>Step 5: プレビューと編集</h2>
+            <p>撮影した写真はプレビューで確認できます。フィルターを適用したり、簡単な編集を加えて、写真をより魅力的に仕上げましょう。完了したら「保存」を忘れずに。</p>
+        </section>
+
+        <section id="complete">
+            <h2>おめでとうございます！</h2>
+            <p>これであなたもSNPITフォトグラファーの一員です！様々な機能を試して、写真撮影の世界を存分に楽しんでください。</p>
+        </section>
+
+        <section id="faq">
+            <h2>よくある質問 (FAQ)</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Q. ログインできない場合は？</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. メールアドレスとパスワードが正しいか再度確認してください。大文字・小文字も区別されます。それでもログインできない場合は、パスワードリセット機能をお試しください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Q. カメラが起動しません。</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. スマートフォンの設定から、SNPITアプリにカメラへのアクセス許可が与えられているか確認してください。許可されていない場合は、設定をオンに変更する必要があります。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Q. 撮った写真が保存されません。</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. スマートフォンのストレージ（空き容量）が不足していないか確認してください。また、アプリに写真（ストレージ）へのアクセス許可が与えられているかも合わせてご確認ください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Q. アプリは無料ですか？</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. アプリの基本的なダウンロードと利用は無料です。ただし、特定の機能やアイテムなどを手に入れる際に、アプリ内課金が必要になる場合があります。詳しくは公式サイトをご確認ください。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 SNPIT 初心者ガイド</p>
+        </footer>
+    </div>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
