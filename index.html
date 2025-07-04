@@ -18,7 +18,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px 0;
         }
         .container {
             max-width: 850px;
@@ -92,51 +91,6 @@
             background-color: #6a11cb;
             transform: scale(1.05);
         }
-        .faq-item {
-            background: #f9f9f9;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border-left: 5px solid #ff7e5f;
-            overflow: hidden;
-        }
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            text-align: left;
-            padding: 20px;
-            font-weight: 700;
-            color: #333;
-            font-size: 1.2em;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        .faq-question:hover {
-            background-color: #f1f1f1;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 20px;
-            color: #555;
-        }
-        .faq-answer p {
-            padding-bottom: 20px;
-            margin: 0;
-        }
-        .faq-toggle {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #2575fc;
-            transition: transform 0.3s;
-        }
-        .faq-question.active .faq-toggle {
-            transform: rotate(45deg);
-        }
         footer {
             text-align: center;
             margin-top: 50px;
@@ -187,66 +141,9 @@
             <h2>おめでとうございます！</h2>
             <p>これであなたもSNPITフォトグラファーの一員です！様々な機能を試して、写真撮影の世界を存分に楽しんでください。</p>
         </section>
-
-        <section id="faq">
-            <h2>よくある質問 (FAQ)</h2>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Q. ログインできない場合は？</span>
-                    <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A. メールアドレスとパスワードが正しいか再度確認してください。大文字・小文字も区別されます。それでもログインできない場合は、パスワードリセット機能をお試しください。</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Q. カメラが起動しません。</span>
-                    <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A. スマートフォンの設定から、SNPITアプリにカメラへのアクセス許可が与えられているか確認してください。許可されていない場合は、設定をオンに変更する必要があります。</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Q. 撮った写真が保存されません。</span>
-                    <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A. スマートフォンのストレージ（空き容量）が不足していないか確認してください。また、アプリに写真（ストレージ）へのアクセス許可が与えられているかも合わせてご確認ください。</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Q. アプリは無料ですか？</span>
-                    <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A. アプリの基本的なダウンロードと利用は無料です。ただし、特定の機能やアイテムなどを手に入れる際に、アプリ内課金が必要になる場合があります。詳しくは公式サイトをご確認ください。</p>
-                </div>
-            </div>
-        </section>
-
         <footer>
             <p>&copy; 2025 SNPIT 初心者ガイド</p>
         </footer>
     </div>
-
-    <script>
-        const faqQuestions = document.querySelectorAll('.faq-question');
-
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                question.classList.toggle('active');
-                const answer = question.nextElementSibling;
-                if (answer.style.maxHeight) {
-                    answer.style.maxHeight = null;
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
